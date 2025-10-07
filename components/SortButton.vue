@@ -10,8 +10,9 @@
         @click="handleSort(type)"
       >
         {{ dict[type] }}   
+        
+        <img :src="iconType" alt="sort icon" class="sort__icon"/>
       </button>      
-      <img :src="iconType" alt="sort icon" class="sort__icon"/>
     </div>
   </div>
 </template>
@@ -28,8 +29,8 @@ interface Props {
 
 const props = defineProps<Props>()
 const dict = {
-  area: 'Площадь',
-  floor: 'S, м²',
+  area: 'S, м²',
+  floor: 'Этаж',
   price: 'Цена, ₽'
 }
 const store = useApartmentsStore()
@@ -61,6 +62,7 @@ const iconType = computed(() => {
 .sort {
   &__button {
     cursor: pointer;
+    white-space: nowrap;
     &--active {
       color: $main-dark;
     }

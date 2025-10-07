@@ -240,7 +240,7 @@ const store = useApartmentsStore()
 }
 
 
-@media (max-width: $breakpoint-large) {
+@media (max-width: $breakpoint-desktop) {
   .apartments-table--desktop {
     display: none;
   }
@@ -249,12 +249,10 @@ const store = useApartmentsStore()
     display: flex;
     flex-direction: column;
   }
-}
 
-@media (max-width: $breakpoint-desktop) {
   .apartments-table {
-    &__header,
-    &__cell {
+      &__header,
+      &__cell {
       padding: 12px 8px;
     }
 
@@ -262,6 +260,6 @@ const store = useApartmentsStore()
       width: 80px;
       height: 60px;
     }
-  }
+  }  
 }
 </style>

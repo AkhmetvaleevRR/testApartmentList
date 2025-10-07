@@ -58,8 +58,22 @@ const showAddMore = computed(() => store.currentPage < store.lastpage)
 @media (min-width: $breakpoint-desktop) {
   .layout {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr minmax(0, 400px);
     gap: 80px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .filters-sidebar {
+    order: 0;
+  }
+  .apartments-section {
+    order: 1;
   }
 }
 </style>

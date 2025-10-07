@@ -54,7 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import crossIcon from '../assets/icons/cross.svg'
 import { useApartmentsStore } from '~/stores/apartments'
 
 const store = useApartmentsStore()
@@ -199,11 +198,11 @@ watch(areaFilterValue, () => {
       }
     }
   }
+}
 
-  @media (max-width: $breakpoint-large) {
-  .filters {
-    padding: 40px;
-    }
+@media (max-width: $breakpoint-large) {
+.filters {
+  padding: 40px;
   }
 }
 </style>

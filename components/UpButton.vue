@@ -53,7 +53,8 @@ onUnmounted(() => {
   justify-content: center;
 
   &:hover {
-    background: scale-color($color-primary, $lightness: -10%);
+    background: $color-primary;
+    opacity: 0.7;
     transform: translateY(-2px);
   }
 }
